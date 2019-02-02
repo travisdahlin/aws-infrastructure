@@ -18,6 +18,8 @@ Pricing starts at \$0.045 per NAT gateway hour plus data processing and data tra
 
 ## Deployemnt
 
+To deploy this module execute the following commands from the project root.
+
 ```bash
 pipenv run runway deploy vpc-core.cfn
 ```
