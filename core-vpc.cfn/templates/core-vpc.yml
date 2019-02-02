@@ -2,9 +2,6 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description: Deploys a VPC with public/private subnets and dependencies.
 
 Parameters:
-  VPCName:
-    Description: Name the VPC
-    Type: String
   VPCCidrBlock:
     Description: The cidr block for this VPC
     Type: String
@@ -21,7 +18,7 @@ Resources:
       InstanceTenancy: default
       Tags:
         - Key: Name
-          Value: !Ref VPCName
+          Value: core-vpc
         - Key: CFNStackName
           Value: !Ref AWS::StackName
         - Key: CFNStackId
