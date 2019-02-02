@@ -1,0 +1,8 @@
+namespace: ${namespace}
+stacker_bucket: ${stacker_bucket_name}
+
+stacks:
+  core-vpc:
+    template_path: templates/core-vpc.yaml
+    enabled: true
+    variables:

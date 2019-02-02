@@ -1,0 +1,8 @@
+deployments:
+  - modules:
+      - path: core-vpc.cfn
+        environments:
+          dev:
+            namespace: lsc-dev
+    regions:
+      - us-west-2
