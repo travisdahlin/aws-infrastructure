@@ -23,3 +23,13 @@ Resources:
           Value: !Ref AWS::StackName
         - Key: CFNStackId
           Value: !Ref AWS::StackId
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: core-igtw
+        - Key: CFNStackName
+          Value: !Ref AWS::StackName
+        - Key: CFNStackId
+          Value: !Ref AWS::StackId
