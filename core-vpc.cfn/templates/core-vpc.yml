@@ -33,3 +33,8 @@ Resources:
           Value: !Ref AWS::StackName
         - Key: CFNStackId
           Value: !Ref AWS::StackId
+  GatewayAttachment:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId: !Ref VPC
+      InternetGatewayId: !Ref InternetGateway
