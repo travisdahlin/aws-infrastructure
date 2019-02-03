@@ -80,3 +80,21 @@ Resources:
     Properties:
       SubnetId: !Ref PublicSubnetB
       RouteTableId: !Ref PublicRouteTable
+  EIPA:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: VPC
+  EIPB:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: VPC
+  NatGatewayA:
+    Type: AWS::EC2::NatGateway
+    Properties:
+      SubnetId: !Ref PublicSubnetA
+      AllocationId: !GetAtt [EIPA, AllocationId]
+  NatGatewayB:
+    Type: AWS::EC2::NatGateway
+    Properties:
+      SubnetId: !Ref PublicSubnetB
+      AllocationId: !GetAtt [EIPB, AllocationId]
