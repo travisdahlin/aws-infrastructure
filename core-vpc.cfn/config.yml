@@ -3,6 +3,7 @@ stacker_bucket: ${stacker_bucket_name}
 
 stacks:
   core-vpc:
-    template_path: templates/core-vpc.yaml
+    template_path: templates/core-vpc.yml
     enabled: true
     variables:
+      VPCCidrBlock: ${vpc_cidr_block}
