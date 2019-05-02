@@ -167,3 +167,20 @@ Resources:
     Properties:
       SubnetId: !Ref PrivateSubnetB
       RouteTableId: !Ref PrivateRouteTableB
+
+Outputs:
+  VPCID:
+    Description: Core VPC ID
+    Value: !Ref VPC
+  PublicSubnetAID:
+    Description: PublicSubnetA ID
+    Value: !Ref PublicSubnetA
+  PublicSubnetBID:
+    Description: PublicSubnetB ID
+    Value: !Ref PublicSubnetB
+  PrivateSubnetAID:
+    Description: PrivateSubnetA ID
+    Value: !Ref PrivateSubnetA
+  PrivateSubnetBID:
+    Description: PrivateSubnetB ID
+    Value: !Ref PrivateSubnetB

@@ -4,5 +4,9 @@ deployments:
         environments:
           dev:
             namespace: lsc-dev
+      - path: cognito.cfn
+        environments:
+          dev:
+            namespace: lsc-dev
     regions:
       - us-west-2
